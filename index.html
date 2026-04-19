@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RTS Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="1200" height="700"></canvas>
+    <div id="ui">
+  <div id="resources">
+  <div class="resource-item">
+    <span class="resource-icon gold" aria-label="gold-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#FDE047" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#F59E0B" stroke-width="2" fill="#FDE047"/>
+        <text x="12" y="16" text-anchor="middle" font-family="Arial" font-size="10" fill="#1F2937">$</text>
+      </svg>
+    </span>
+    <span class="resource-value" id="gold">500</span>
+  </div>
+  <div class="resource-item">
+    <span class="resource-icon wood" aria-label="wood-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="9" width="16" height="6" rx="3" fill="#8B5A2B" />
+        <path d="M6 9a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4" fill="none" stroke="#5A3A1A" stroke-width="2"/>
+      </svg>
+    </span>
+    <span class="resource-value" id="wood">500</span>
+  </div>
+  <div class="resource-item">
+    <span class="resource-icon units" aria-label="units-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A1A1AA" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="7" r="3" fill="#A1A1AA" />
+        <path d="M6 21a6 6 0 0 1 12 0" fill="none" />
+      </svg>
+    </span>
+    <span class="resource-value" id="units">0</span>/<span class="max-units" id="max-units">20</span>
+  </div>
+</div>
+      <div id="selection-info"></div>
+      <div id="actions"></div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
